@@ -9,11 +9,18 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hi everybody!
-  displayName: 'Run a one-line script'
+# steps:
+# - script: echo Hi everybody!
+#   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+# - script: |
+#     echo Add other tasks to build, test, and deploy your project.
+#     echo See https://aka.ms/yaml
+#   displayName: 'Run a multi-line script'
+
+- task: Pulumi@1
+  inputs:
+    azureSubscription: 'zachlab(1d3a3cb3-fe4d-447c-8275-68f63a3e7809)'
+    command: 'preview'
+    stack: 'pulumi-aws-demo/aws-typescript/dev'
+    createPrComment: true
