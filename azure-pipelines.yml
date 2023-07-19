@@ -24,5 +24,5 @@ steps:
     command: 'preview'
     loginArgs: '--local'
     cwd: './aws-typescript'
-    stack: 'pulumi-aws-demo/aws-typescript/dev'
+    stack: 'zach-perkins/aws-typescript/dev'
     createPrComment: true
