@@ -23,5 +23,6 @@ steps:
     azureSubscription: 'zachlab(1d3a3cb3-fe4d-447c-8275-68f63a3e7809)'
     command: 'preview'
     loginArgs: '--local'
+    cwd: './aws-typescript'
     stack: 'dev'
     createPrComment: true
